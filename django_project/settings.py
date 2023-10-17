@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # James Starner
     'portfolio_app',
+    "bootstrap5", #has to be in double quotes or it breaks
 ]
 
 #Add support for authenticating users

@@ -60,6 +60,7 @@ class Project(models.Model):
     def get_absolute_url(self):
         return reverse('student-detail', args=[str(self.id)])
     
+"""
 # Model to represent the relationship between projects and portfolios.
 # Each instance of this model will have a reference to a Portfolio and a Project,
 # creating a many-to-many relationship between portfolios and projects.
@@ -74,3 +75,5 @@ class ProjectsInPortfolio(models.Model):
 class Meta:
     #ensures that each project is associated with only one portfolio
     unique_together = ('portfolio', 'project')
+
+"""

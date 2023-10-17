@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 
 
@@ -9,4 +9,10 @@ urlpatterns = [
 # name='index' parameter is to dynamically create url
 # example in html <a href="{% url 'index' %}">Home</a>.
 path('', views.index, name='index'),
+
+#added in Ge05
+path('students/', views.StudentListView.as_view(), name= 'students'),
+path('student/<int:pk>', views.StudentDetailView.as_view(), name='student-detail'),
+#re_path(r'^student/(?P<pk>\d+)$', views.StudentDetailView.as_view(), name='student-detail'),
 ]
+
