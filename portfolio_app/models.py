@@ -17,7 +17,7 @@ class Portfolio(models.Model):
     #if you define this method then Django will automatically
     # add a "View on Site" button to the model's record editing screens in the Admin site
     def get_absolute_url(self):
-        return reverse('student-detail', args=[str(self.id)])
+        return reverse('portfolio-detail', args=[str(self.id)]) #I have to change this later
 
 class Student(models.Model):
 #List of choices for major value in database, human readable name
@@ -58,7 +58,7 @@ class Project(models.Model):
     #if you define this method then Django will automatically
     # add a "View on Site" button to the model's record editing screens in the Admin site
     def get_absolute_url(self):
-        return reverse('student-detail', args=[str(self.id)])
+        return reverse('project-detail', args=[str(self.id)])
     
 """
 # Model to represent the relationship between projects and portfolios.
